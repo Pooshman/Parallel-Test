@@ -1,6 +1,5 @@
 # cluster.yaml for Snakemake with SLURM
 
-# SLURM settings
 slurm:
   command: 'sbatch'
   status: 'squeue -j {job_id}'
@@ -14,6 +13,8 @@ slurm:
 
   # Default job settings
   default:
-    jobs: 100
-    max_threads: 4
-
+    nodes: 1
+    ntasks-per-node: 1
+    cpus-per-task: 4
+    mem: '4G'
+    time: '00:10:00'
