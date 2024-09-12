@@ -12,5 +12,5 @@ rule simulate_work:
     shell:
         """
         echo "Running on node $(hostname)" > {output}
-        sleep 60
+        sleep 30
         """
