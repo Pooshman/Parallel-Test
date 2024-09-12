@@ -7,10 +7,10 @@ snakemake_cmd = [
     "snakemake",
     "--snakefile", "Snakefile",
     "--cluster-config", "cluster.yaml",
-    "--jobs", "100",  # This controls the maximum number of jobs to run in parallel
+    "--jobs", "100",  # Maximum number of jobs to submit in parallel
     "--use-conda",
     "--keep-going",
-    "--latency-wait", "30",
+    "--latency-wait", "60",
 ]
 
 # Execute Snakemake command
