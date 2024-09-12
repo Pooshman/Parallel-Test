@@ -1,7 +1,3 @@
-# Snakefile
-
-import os
-
 # Define the input and output files
 rule all:
     input:
