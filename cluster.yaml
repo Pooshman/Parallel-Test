@@ -18,3 +18,7 @@ slurm:
     cpus-per-task: 4
     mem: '4G'
     time: '00:10:00'
+
+  # Job settings for a specific rule, to request 5 nodes
+  simulate_work:
+    nodes: 5
