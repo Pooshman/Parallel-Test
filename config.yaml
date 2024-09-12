@@ -22,11 +22,10 @@ slurm:
 
 # Conda settings
 env:
-  conda_env: 'snakemake'
+  conda_env: 'snakemake7'
   conda_executable: '/home/ubuntu/miniconda3/bin/conda'  # Replace with actual path from `which conda`
   conda_config_path: '/home/ubuntu/.condarc'  # Replace with actual path if needed
 
 # Paths to important files
 additional:
   snakefile: 'Snakefile'
-  static_nodes_script: 'staticnodes.sh'
