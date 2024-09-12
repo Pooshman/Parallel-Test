@@ -19,6 +19,10 @@ slurm:
     mem: '4G'
     time: '00:10:00'
 
-  # Job settings for a specific rule, to request 5 nodes
+  # Job settings for simulate_work rule, to request 5 nodes
   simulate_work:
-    nodes: 5
+    nodes: 1  # Each job will request 1 node, but with parallel Snakemake will use multiple nodes
+    ntasks-per-node: 1
+    cpus-per-task: 4
+    mem: '4G'
+    time: '00:10:00'
