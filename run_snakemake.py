@@ -1,18 +1,18 @@
+#!/usr/bin/env python
+
 import subprocess
 
-def run_snakemake():
-    # Define Snakemake command
-    snakemake_cmd = [
-        "snakemake",
-        "--snakefile", "Snakefile",
-        "--cores", "16",  # Adjust according to the number of cores you want to use
-        "--jobs", "100",  # Maximum number of jobs to submit at once
-        "--latency-wait", "60",
-        "--keep-going",  # Continue running other jobs even if some fail
-    ]
-    
-    # Execute Snakemake command
-    subprocess.run(snakemake_cmd)
+# Define Snakemake command with cluster configuration
+snakemake_cmd = [
+    "snakemake",
+    "--snakefile", "Snakefile",
+    "--configfile", "config.yaml",
+    "--cluster-config", "cluster.yaml",
+    "--jobs", "100",
+    "--use-conda",
+    "--keep-going",
+    "--latency-wait", "60",
+]
 
-if __name__ == "__main__":
-    run_snakemake()
+# Execute Snakemake command
+subprocess.run(snakemake_cmd)
