@@ -6,7 +6,6 @@ import subprocess
 snakemake_cmd = [
     "snakemake",
     "--snakefile", "Snakefile",
-    "--configfile", "config.yaml",
     "--cluster-config", "cluster.yaml",
     "--jobs", "100",
     "--use-conda",
