@@ -1,17 +1,16 @@
+# Snakefile
+
+# Define the input and output files
 rule all:
     input:
-        "results/processed_data.txt"
+        "results/output.txt"
 
-rule generate_data:
+# Rule to simulate work and output node activity
+rule simulate_work:
     output:
-        "data/input_data.txt"
+        "results/output.txt"
     shell:
-        "echo 'Generating data' > {output}"
-
-rule process_data:
-    input:
-        "data/input_data.txt"
-    output:
-        "results/processed_data.txt"
-    shell:
-        "echo 'Processing data' > {output}"
+        """
+        echo "Running on node $(hostname)" > {output}
+        sleep 60
+        """
