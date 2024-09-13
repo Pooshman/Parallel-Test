@@ -1,21 +1,8 @@
+# cluster.yaml
 __default__:
-  partition: 'queue-1'
-  nodes: 5
-  ntasks-per-node: 1
-  cpus-per-task: 4
-  mem: '4G'
-  time: '01:00:00'
+  nodes: 5                    # Number of nodes
+  ntasks-per-node: 1           # Tasks per node
+  cpus-per-task: 4             # CPUs per task
+  mem: 4G                      # Memory per task
+  time: "00:10:00"             # Time limit
 
-rule1:
-  nodes: 5
-  ntasks-per-node: 1
-  cpus-per-task: 4
-  mem: '4G'
-  time: '01:00:00'
-
-rule2:
-  nodes: 5
-  ntasks-per-node: 1
-  cpus-per-task: 4
-  mem: '4G'
-  time: '01:00:00'
