@@ -4,4 +4,4 @@ __default__:
   cpus-per-task: 4             # CPUs per task
   mem: 4G                      # Memory per task
   time: "00:01:00"             # Time limit
-  output: "results/output_{n}.txt"  # Ensure this is set correctly to match Snakemake's output patterns
+  output: "results/output_%j.txt" # Output file per job
