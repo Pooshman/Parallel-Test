@@ -1,6 +1,6 @@
 rule all:
     input:
-        expand("results/output_{wildcards.n}.txt", n=range(1, 6))
+        expand("results/output_{n}.txt", n=range(1, 6))
 
 rule simulate_work:
     output:
