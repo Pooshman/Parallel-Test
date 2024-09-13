@@ -8,7 +8,7 @@ rule simulate_work:
     shell:
         """
         sbatch --nodes=1 --ntasks=1 --cpus-per-task=4 --mem=4G --time=00:01:00 \
-        --wrap="sleep 10; echo 'Task completed on node: $(hostname)' >> results/output_{wildcards.n}.txt"
+        --wrap="sleep 10; echo 'Task completed on node: $(hostname)' >> {output}"
         """
 
 rule post_process:
