@@ -8,11 +8,10 @@ cmd = [
     "--cluster-config", "cluster.yaml",
     "--cluster", (
         "sbatch --nodes={cluster.nodes} --ntasks={cluster.ntasks-per-node} "
-        "--cpus-per-task={cluster.cpus-per-task} --mem={cluster.mem} --time={cluster.time} "
-        "--output={cluster.output}"
+        "--cpus-per-task={cluster.cpus-per-task} --mem={cluster.mem} --time={cluster.time}"
     ),
     "--keep-going",
-    "--latency-wait", "10"
+    "--latency-wait", "60"
 ]
 
 # Execute the Snakemake command
