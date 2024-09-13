@@ -8,5 +8,5 @@ rule simulate_work:
     shell:
         """
         sleep 60
-        echo 'Task completed on node: $(hostname)' >> {output}
+        echo 'Task completed on node: ' $(hostname) >> {output}
         """
