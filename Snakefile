@@ -1,16 +1,13 @@
-# Define the input and output files
 rule all:
     input:
-        expand("results/output_{i}.txt", i=range(5))
+        "results/output.txt"
 
-# Rule to simulate work and output node activity
 rule simulate_work:
     output:
-        "results/output_{i}.txt"
-    params:
-        node_id="{i}"
+        "results/output.txt"
     shell:
         """
-        echo "Running on node $(hostname) with job {params.node_id}" > {output}
-        sleep 60
+        sbatch --nodes={cluster.nodes} --ntasks-per-node={cluster.ntasks-per-node} \
+               --cpus-per-task={cluster.cpus-per-task} --mem={cluster.mem} --time={cluster.time} \
+               --output=output_{wildcards}.txt --wrap="sleep 60; echo 'Task completed on node: $(hostname)' >> {output}"
         """
