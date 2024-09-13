@@ -11,7 +11,7 @@ cmd = [
         "--cpus-per-task={cluster.cpus-per-task} --mem={cluster.mem} --time={cluster.time}"
     ),
     "--keep-going",
-    "--latency-wait", "60"
+    "--latency-wait", "20"
 ]
 
 # Execute the Snakemake command
