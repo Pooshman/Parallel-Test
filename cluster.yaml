@@ -1,8 +1,7 @@
-# cluster.yaml
 __default__:
-  nodes: 5                    # Number of nodes
+  nodes: 1                     # Number of nodes per job
   ntasks-per-node: 1           # Tasks per node
   cpus-per-task: 4             # CPUs per task
   mem: 4G                      # Memory per task
-  time: "00:10:00"             # Time limit
-  output: "output_%j.txt"      # Output file per job
+  time: "00:01:00"             # Time limit
+  output: "results/output_%j.txt"  # Output file per job
