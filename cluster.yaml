@@ -4,3 +4,4 @@ __default__:
   cpus-per-task: 4
   mem: 4G
   time: "00:01:00"
+  output: "results/output_{wildcards.n}.txt"
