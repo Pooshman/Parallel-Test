@@ -12,7 +12,7 @@ cmd = [
         "--output={cluster.output}"
     ),
     "--keep-going",
-    "--latency-wait", "60"
+    "--latency-wait", "10"
 ]
 
 # Execute the Snakemake command
