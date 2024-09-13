@@ -7,6 +7,6 @@ rule simulate_work:
         "results/output.txt"
     shell:
         """
-        sleep 60
+        sleep 10
         echo 'Task completed on node: ' $(hostname) >> {output}
         """
